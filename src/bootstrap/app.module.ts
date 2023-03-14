@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD, APP_INTERCEPTOR} from '@nestjs/core';
 
 // Files import
+import { MiddlewareModule } from 'src/cross-cutting/middlewares/middleware.module';
 import { HttpModule } from 'src/access/http/http.module';
 
 @Module({
