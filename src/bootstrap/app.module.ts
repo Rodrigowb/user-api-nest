@@ -3,10 +3,12 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_GUARD, APP_INTERCEPTOR} from '@nestjs/core';
 
-// Files import
+// Files import (modules)
 import { MiddlewareModule } from 'src/cross-cutting/middlewares/middleware.module';
 import { HttpModule } from 'src/access/http/http.module';
 import { DatabaseModule } from 'src/db/database.module';
+import { SessionModule } from 'src/services/session/session.module';
+
 
 @Module({
   imports: [
