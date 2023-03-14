@@ -10,6 +10,9 @@ import { DatabaseModule } from 'src/db/database.module';
 import { SessionModule } from 'src/services/session/session.module';
 import { LogModule } from 'src/services/log/log.module';
 
+// Files import (providers)
+import {JwtAuthGuard} from 'src/cross-cutting/guards/jwt-auth.guard'
+
 
 @Module({
   imports: [
