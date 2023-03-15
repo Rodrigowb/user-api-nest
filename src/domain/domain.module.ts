@@ -8,7 +8,6 @@ import { ConfigService } from "@nestjs/config";
 @Module({
   imports: [RepositoryModule, ValidationModule],
   providers: [
-    BlacklistDomain,
     ConfigService,
     JwtService,
     LogService,
@@ -17,7 +16,6 @@ import { ConfigService } from "@nestjs/config";
     UserPasswordTokenDomain
   ],
   exports: [
-    BlacklistDomain,
     ConfigService,
     JwtService,
     LogService,

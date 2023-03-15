@@ -14,7 +14,7 @@ import { PublicController } from './controllers/public/public.controller';
 
 @Module({
   imports: [ApplicationModule, SessionModule, DomainModule],
-  controllers: [PublicController, BlacklistController, UserController],
+  controllers: [PublicController, UserController],
   providers: [LocalStrategy, JwtStrategy, JwtService, MiddlewareModule]
 })
 export class HttpModule implements NestModule {

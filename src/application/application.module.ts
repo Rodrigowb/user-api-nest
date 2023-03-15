@@ -23,12 +23,10 @@ const expiresIn: number = parseInt(process.env.JWT_EXPIRATION_TIME);
     MiddlewareModule
   ],
   providers: [
-    BlacklistApplication,
     PublicApplication,
     UserApplication
   ],
   exports: [
-    BlacklistApplication,
     PublicApplication,
     UserApplication
   ]
