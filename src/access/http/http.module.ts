@@ -11,6 +11,7 @@ import { DomainModule } from 'src/domain/domain.module';
 import { PublicController } from './controllers/public/public.controller';
 import { UserController } from './controllers/user/user.controller';
 import { LocalStrategy } from 'src/cross-cutting/strategies/local.strategy';
+import { JwtStrategy } from 'src/cross-cutting/strategies/jwt.strategy';
 
 
 
