@@ -2,6 +2,7 @@
 import { Global, Module } from '@nestjs/common';
 
 // Files import
+import { SessionService } from './session.service';
 
 @Global()
 @Module({

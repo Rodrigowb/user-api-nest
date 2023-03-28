@@ -12,7 +12,7 @@ import { LogModule } from 'src/services/log/log.module';
 
 // Files import (providers)
 import { JwtAuthGuard } from 'src/cross-cutting/guards/jwt-auth.guard'
-import {TransactionInterceptor} from 'src/cross-cutting/Interceptors/transaction.interceptor'
+import { TransactionInterceptor } from 'src/cross-cutting/Interceptors/transaction.interceptor'
 
 
 @Module({
