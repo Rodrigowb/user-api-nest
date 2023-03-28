@@ -10,8 +10,16 @@ import { DomainModule } from 'src/domain/domain.module';
 // Files import (controllers)
 import { PublicController } from './controllers/public/public.controller';
 import { UserController } from './controllers/user/user.controller';
+
+// Files import (providers)
 import { LocalStrategy } from 'src/cross-cutting/strategies/local.strategy';
 import { JwtStrategy } from 'src/cross-cutting/strategies/jwt.strategy';
+import { MiddlewareModule } from "src/cross-cutting/middlewares/middleware.module";
+
+// Files import (middlewares)
+import { AuthMiddleware } from 'src/cross-cutting/middlewares/auth.middleware';
+
+
 
 
 
