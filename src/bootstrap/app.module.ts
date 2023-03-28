@@ -36,10 +36,6 @@ import {TransactionInterceptor} from 'src/cross-cutting/Interceptors/transaction
     {
       provide: APP_INTERCEPTOR,
       useClass: TransactionInterceptor
-    },
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: ExceptionInterceptor
     }
   ]
 })
