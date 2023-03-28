@@ -2,6 +2,7 @@
 import { Module } from "@nestjs/common";
 
 // Files import
+import { databaseProvider } from './database.provider'
 
 @Module({
   imports: [],
