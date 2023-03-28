@@ -5,12 +5,14 @@ import { Sequelize, Transaction } from 'sequelize';
 import { catchError, Observable, tap } from "rxjs";
 
 // Files import
-import {ProviderNames} from ''
+import { ProviderNames } from "../constants/provider-names.constants";
+import { SessionService } from "src/services/session/session.service";
+import { USING_TRANSACTION_KEY } from "../decorators/using-transaction.decorator";
 
 @Injectable({ scope: Scope.REQUEST })
 export class TransactionInterceptor implements NestInterceptor{
   public constructor(
-    @Inject(ProvidersNames.sequelize) private readonly sequelize: Sequelize,
+    @Inject(ProviderNames.sequelize) private readonly sequelize: Sequelize,
     private readonly session: SessionService,
     private readonly reflector: Reflector
   ) { }
@@ -21,14 +23,14 @@ export class TransactionInterceptor implements NestInterceptor{
       context.getClass()
     ]);
 
-    this.session.seTransaction(null);
+    this.session.setTransaction(null);
 
     if (!usingTransaction) {
       return next.handle();
     }
 
     const transaction: Transaction = await this.sequelize.transaction();
-    this.session.seTransaction(transaction);
+    this.session.setTransaction(transaction);
     return next.handle().pipe(
       tap(async () => {
         await transaction.commit();
