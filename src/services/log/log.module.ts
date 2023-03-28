@@ -1,11 +1,12 @@
 // Nest imports
-import { Global, Module } from '@nestjs/common'
+// import { Global, Module } from '@nestjs/common'
 
-// Files import
+// // Files import
+// import {LogService} from './log.service'
 
-@Global()
-@Module({
-  exports: [LogService],
-  providers: [LogService]
-})
-export class LogModule {}
+// @Global()
+// @Module({
+//   exports: [LogService],
+//   providers: [LogService]
+// })
+// export class LogModule {}

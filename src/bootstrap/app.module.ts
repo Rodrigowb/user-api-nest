@@ -8,7 +8,6 @@ import { MiddlewareModule } from 'src/cross-cutting/middlewares/middleware.modul
 import { HttpModule } from 'src/access/http/http.module';
 import { DatabaseModule } from 'src/db/database.module';
 import { SessionModule } from 'src/services/session/session.module';
-import { LogModule } from 'src/services/log/log.module';
 
 // Files import (providers)
 import { JwtAuthGuard } from 'src/cross-cutting/guards/jwt-auth.guard'
@@ -25,7 +24,6 @@ import { TransactionInterceptor } from 'src/cross-cutting/Interceptors/transacti
     }),
     DatabaseModule,
     SessionModule,
-    LogModule
   ],
   controllers: [],
   providers: [
