@@ -5,6 +5,7 @@ import { Sequelize, Transaction } from 'sequelize';
 import { catchError, Observable, tap } from "rxjs";
 
 // Files import
+import {ProviderNames} from ''
 
 @Injectable({ scope: Scope.REQUEST })
 export class TransactionInterceptor implements NestInterceptor{
