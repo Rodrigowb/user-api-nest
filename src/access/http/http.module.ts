@@ -20,9 +20,6 @@ import { MiddlewareModule } from "src/cross-cutting/middlewares/middleware.modul
 import { AuthMiddleware } from 'src/cross-cutting/middlewares/auth.middleware';
 
 
-
-
-
 @Module({
   imports: [ApplicationModule, SessionModule, DomainModule],
   controllers: [PublicController, UserController],

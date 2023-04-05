@@ -2,10 +2,16 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { JwtModule } from "@nestjs/jwt";
-import { MiddlewareModule } from "src/cross-cutting/middlewares/middleware.module";
-import { SessionModule } from "src/services/session/session.module";
 
-// Files import
+// Files import (modules)
+import { DomainModule } from "src/domain/domain.module";
+import { ServiceModule } from "src/services/service.module";
+import { SessionModule } from "src/services/session/session.module";
+import { MiddlewareModule } from "src/cross-cutting/middlewares/middleware.module";
+
+// Files import (providers)
+import { PublicApplication } from './public.application';
+import { UserApplication } from './user.application';
 
 const jwtSecret: string = process.env.JWT_SECRET;
 const expiresIn: number = parseInt(process.env.JWT_EXPIRATION_TIME);
