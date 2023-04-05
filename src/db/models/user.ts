@@ -1,6 +1,5 @@
 import { CreationOptional, Model } from "sequelize";
 import { Column, PrimaryKey, Table, DataType } from "sequelize-typescript";
-import { Col } from "sequelize/types/utils";
 
 @Table({
   tableName: 'Users',
