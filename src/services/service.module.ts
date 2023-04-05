@@ -4,8 +4,8 @@ import { SessionModule } from "./session/session.module";
 
 // Files import
 @Module({
-  imports: [FileManagerModule, EmailModule, SessionModule],
+  imports: [SessionModule],
   providers: [],
-  exports: [FileManagerModule, EmailModule, SessionModule]
+  exports: [SessionModule]
 })
 export class ServiceModule {}

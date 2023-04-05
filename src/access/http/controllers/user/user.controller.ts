@@ -3,6 +3,7 @@ import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Put, 
 import { ApiBearerAuth, ApiBody, ApiConsumes, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger'
 
 // Files import
+import {RoleGuard}
 
 @ApiTags('Users')
 @Controller('users')
