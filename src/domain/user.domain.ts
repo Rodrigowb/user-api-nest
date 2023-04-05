@@ -6,6 +6,7 @@ import { ProviderNames } from "src/cross-cutting/constants/provider-names.consta
 import { SessionService } from "src/services/session/session.service";
 import { Op } from "sequelize";
 import { User } from "src/db/models/user";
+import { RepositoryAdapter } from "src/repository/adapters/repository-adapter";
 
 @Injectable()
 export class UserDomain extends RepositoryAdapter<User> {

@@ -13,6 +13,12 @@ export class RepositoryAdapter<T extends Model> implements IRepository<T> {
     this.constraints = RepositoryConstraints.build(this.session);
   }
 
+  public async count(options: CountOptions<Attributes<T>> = {}, withTrashed: boolean = false): Promise<number>{
+    this.constraints.applySoftDeleteConstraints(options, withTrashed);
+    this.constraints.resetConstraints();
+    return await this.repository.count(options)
+  }
+
   public async find(options: FindOptions<Attributes<T>> = {}, withTrashed: boolean = false): Promise<T[]>{
     this.constraints.applySoftDeleteConstraints(options, withTrashed);
     this.constraints.resetConstraints();
