@@ -3,7 +3,9 @@ import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Put, 
 import { ApiBearerAuth, ApiBody, ApiConsumes, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger'
 
 // Files import
-import {RoleGuard}
+import { AppConstants } from 'src/cross-cutting/constants/app.constants';
+import { RoleGuard } from 'src/cross-cutting/guards/role-auth.guard';
+import {User}
 
 @ApiTags('Users')
 @Controller('users')
